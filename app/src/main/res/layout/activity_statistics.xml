@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Statistics">
+
+    <com.razerdp.widget.animatedpieview.AnimatedPieView
+        android:id="@+id/PieView"
+        android:layout_width="180dp"
+        android:layout_height="151dp"
+        android:layout_marginStart="10dp"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="70dp"/>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="120dp"
+        android:layout_toEndOf="@id/PieView"
+        android:layout_marginTop="81dp"
+        android:layout_toRightOf="@id/PieView">
+
+
+        <TextView
+            android:id="@+id/hintColour"
+            android:layout_width="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/holo_red_light"/>
+
+        <TextView
+            android:id="@+id/hint1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/hintColour"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:text="Confirmed Cases" />
+
+        <TextView
+            android:id="@+id/hintColour2"
+            android:layout_width="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/hint1"
+            android:background="@android:color/holo_orange_light"/>
+
+        <TextView
+            android:id="@+id/hint2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/hintColour2"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/hint1"
+            android:text="Active"/>
+
+        <TextView
+            android:id="@+id/hintColour3"
+            android:layout_width="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/hint2"
+            android:background="@android:color/holo_green_light"/>
+
+        <TextView
+            android:id="@+id/hint3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/hintColour2"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/hintColour2"
+            android:text="Recovered" />
+
+        <TextView
+            android:id="@+id/hintColour4"
+            android:layout_width="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@id/hint3"
+            android:background="#1565C0"/>
+
+        <TextView
+            android:id="@+id/hint4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/hintColour3"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:layout_below="@id/hintColour3"
+            android:text="Dead" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="60dp"
+        android:background="@drawable/spinner_background"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="60dp"
+        android:backgroundTint="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/hintText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/PieView"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/artifika"
+        android:text="(* Click on the pie chart for more info *)"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/hintText">
+
+    <RelativeLayout
+        android:id="@+id/mainRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/hintText">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/symtoms_icons_background">
+
+        <TextView
+            android:id="@+id/head"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_warning_black_24dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:text="Confirmed Cases" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/artifika"
+            android:text="NIL"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/artifika"
+            android:text="people"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/two"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/one"
+        android:background="@drawable/symtoms_icons_background">
+
+        <TextView
+            android:id="@+id/head2"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_warning_black_24dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:text="New Cases" />
+
+        <TextView
+            android:id="@+id/count2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/artifika"
+            android:text="NIL"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count2"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/artifika"
+            android:text="people"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/three"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/one"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/symtoms_icons_background" >
+
+        <TextView
+            android:id="@+id/head3"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_warning_black_24dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:text="Deceased" />
+
+        <TextView
+            android:id="@+id/count3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/artifika"
+            android:text="NIL"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count3"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/artifika"
+            android:text="people"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/four"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/two"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/one"
+        android:background="@drawable/symtoms_icons_background" >
+
+        <TextView
+            android:id="@+id/head4"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_warning_black_24dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:text="Today Deceased" />
+
+        <TextView
+            android:id="@+id/count4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/artifika"
+            android:text="NIL"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count4"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/artifika"
+            android:text="people"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/five"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/three"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/symtoms_icons_background">
+
+        <TextView
+            android:id="@+id/head5"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_warning_black_24dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:text="Total Recovered" />
+
+        <TextView
+            android:id="@+id/count5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/artifika"
+            android:text="NIL"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count5"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/artifika"
+            android:text="people"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/six"
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_below="@id/four"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@id/one"
+        android:background="@drawable/symtoms_icons_background">
+
+        <TextView
+            android:id="@+id/head6"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:drawableLeft="@drawable/ic_warning_black_24dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/artifika"
+            android:paddingLeft="10dp"
+            android:text="Total Active" />
+
+        <TextView
+            android:id="@+id/count6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/head6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/artifika"
+            android:text="NIL"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/count6"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/artifika"
+            android:text="people"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="170dp"
+        android:layout_marginRight="100dp"
+
+        android:indeterminateDrawable="@drawable/progress_bar_style_2"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="170dp"
+        android:indeterminateDuration="3000"
+        android:layout_marginRight="120dp"
+
+        android:indeterminateDrawable="@drawable/progress_bar_style_3"/>
+
+</RelativeLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Myths">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_info_outline_red_24dp"
+        android:drawablePadding="20dp"
+        android:fontFamily="@font/artifika"
+        android:paddingLeft="15dp"
+        android:text="COVID-19 Myth Buster : "
+        android:textSize="23dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/artifika"
+        android:layout_marginTop="75dp"
+        android:text=" (* Please wait for some time, while the page is loading.. *)"
+        android:textSize="12dp"/>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="170dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="170dp"
+        android:layout_marginRight="10dp"
+
+        android:indeterminateDrawable="@drawable/progress_bar_style_2"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="190dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="170dp"
+        android:indeterminateDuration="3000"
+        android:layout_marginRight="10dp"
+
+        android:indeterminateDrawable="@drawable/progress_bar_style_3"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
